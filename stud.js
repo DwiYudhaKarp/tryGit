@@ -213,8 +213,8 @@ console.log("\nCek loker: ", loker);
 
 const PeriodikTable= [ 
     {
-        asam : "Asam Amino",
-        basah : "Cuka",
+        asam : "Asam Asetat",
+        basah : "Barium hidroksida(Ba(OH)2)",
     }, 
     {
         asam : "Asam Sulfat",
