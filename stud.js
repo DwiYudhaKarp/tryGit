@@ -107,7 +107,8 @@ for(let i = n; i >= 1; i--){
 */
 
 
-//array 
+//                  <======array======>
+
 //  - push():       menambahkan item pada akhir Array
 //  - pop():        menghapus item dari paling akhir Array
 //  - shift():      menghapus item dari awal Array
@@ -185,3 +186,48 @@ const joy = [[9, 8, 7],
              [3, 2, 1]
             ]
 console.log("Cari nilai pada multidimensi / nestedarray: ",joy[2][2]);
+console.log("\n");
+
+
+//                  <=====Object=====>
+const loker = {
+    jenis : "Sepatu",
+    merk : {
+        Indonesia : ["Rebook", "Vantela", "Eiger", "Salomon"],
+        Jepang : ["Mizuno", "Yonex"],
+        AS : ["Nike", "Adidas"]
+    },
+    size : [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
+    isReady: true
+};
+console.log("Panggil object: ", loker.jenis);
+console.log("Merek apa: ", loker.merk.Indonesia[2], loker.merk.Jepang[1]);
+console.log("Sizenya berapa: ", loker.size[7]);
+console.log("Apakah stocknya ada! ", loker.isReady);
+
+loker["jenis"] = "Shoes";
+console.log("\nCek loker: ", loker);
+loker.harga = "1000k";
+console.log("\nHarga: ", loker.harga);
+console.log("\nCek loker: ", loker);
+
+const PeriodikTable= [ 
+    {
+        asam : "Asam Amino",
+        basah : "Cuka",
+    }, 
+    {
+        asam : "Asam Sulfat",
+        basah : "Natrium hidroksida",
+    }, 
+    {
+        asam : "Asam fosfat",
+        basah : "Kalsium hidroksida",
+    },
+    {
+        netral : "Natrium Klorida atau garam"
+    }
+]
+
+console.log("\nIsi tabel periodik: ", PeriodikTable);
+console.log("Jenis asam / basah: ", PeriodikTable[2].basah);
