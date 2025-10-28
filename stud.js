@@ -231,3 +231,82 @@ const PeriodikTable= [
 
 console.log("\nIsi tabel periodik: ", PeriodikTable);
 console.log("Jenis asam / basah: ", PeriodikTable[2].basah);
+
+//                  <===== Looping =====>
+/*
+for(let i = 0; i < joy.length; i++) {
+    let row = joy[i];
+    console.log(` Row-#${i + 1}`);
+    for(let j = 0; j < row.length; j++) {
+        console.log(`   ${row[j]}`);
+    }
+}
+*/
+
+//for of | untuk melakukan looping pada array
+for(let row of joy){
+    for(let num of row){
+        console.log(`Number ${num}`);
+    }
+}
+
+//for in | untuk melakukan looping pada object
+let salaryWork = {
+    sales : 55,
+    counting : 78,
+    medicine : 8,
+    security : 65
+}
+
+for(let salar in salaryWork){
+    console.log(`${salar} gaji : ${salaryWork[salar]}jt `);
+}
+
+let sum = 0;
+let lary = Object.values(salaryWork);
+for(let ary of lary){
+    sum += ary;
+}
+let avg = sum / lary.length;
+console.log(`Total gaji keseluruhan: ${sum} Rata-rata gaji: ${avg} jt`);
+
+/*
+let input = prompt("type! somthing");
+if(input.toLowerCase() === "pass"){
+    const passw = "Ocean_Fotres";
+    let type = prompt("enter the password: ");
+    while(type !== passw) {
+        type = prompt("Enter the Password: ");
+    }
+    alert("Congr! passtopsword is corret, the page is open");
+}else if(input.toLowerCase() === "next"){
+    let nex = prompt("If u want stop, u can say? ");
+    while(true){
+        nex = prompt(nex);
+        if(nex.toUpperCase() === "STOP") break;
+    }
+    alert("ok");    
+}
+*/
+
+//
+let maximum = parseInt(prompt("Masukan nilai Max: "));
+while(!maximum){
+    maximum = parseInt(prompt("Masukan nilai maksim: "))
+}
+
+const targetNum = Math.floor(Math.random() * maximum) + 1;
+console.log(targetNum);
+
+let guess = parseInt(prompt("Isi tebakan pertamamu: "));
+let attamps = 1;
+
+while(parseInt(guess) !== targetNum){
+    attamps++;
+    if(guess > targetNum){
+        guess = parseInt(prompt("Isi terlalu tinggi! tebak lagi: "));
+    }else{
+        guess = parseInt(prompt("Isi terlalu rendah! tabak lagi: "));
+    }
+}
+alert(`Selamat tebakan kamu benar! dengan percobaan ke ${attamps} kali`);
