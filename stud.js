@@ -336,3 +336,4 @@ for(let i = 0; i < 10;i++){
     // console.log(i);
 }
 console.log(`Lebar: ${wid}`);
+console.log("\n");
