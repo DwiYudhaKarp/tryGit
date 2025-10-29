@@ -269,7 +269,7 @@ for(let ary of lary){
 }
 let avg = sum / lary.length;
 console.log(`Total gaji keseluruhan: ${sum} Rata-rata gaji: ${avg} jt`);
-
+console.log("\n");
 /*
 let input = prompt("type! somthing");
 if(input.toLowerCase() === "pass"){
@@ -287,7 +287,6 @@ if(input.toLowerCase() === "pass"){
     }
     alert("ok");    
 }
-*/
 
 //
 let maximum = parseInt(prompt("Masukan nilai Max: "));
@@ -310,3 +309,30 @@ while(parseInt(guess) !== targetNum){
     }
 }
 alert(`Selamat tebakan kamu benar! dengan percobaan ke ${attamps} kali`);
+*/
+
+
+//                  <===== function =====>
+let lan = "C";
+
+function typlan(){
+    let lan ="Python";
+    console.log(lan);
+    return lan;
+}
+typlan();
+console.log(lan);
+console.log("\n");
+
+// (blok scope funtion) liat type data yang digunakan untuk mendifinisikan variabel
+let hig = 175;
+if(hig > 170){
+    var wid = 30;
+    // console.log(wid);
+}
+console.log(`lebar: ${wid}`);
+for(let i = 0; i < 10;i++){
+    wid = i;
+    // console.log(i);
+}
+console.log(`Lebar: ${wid}`);
