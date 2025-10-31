@@ -107,7 +107,7 @@ for(let i = n; i >= 1; i--){
 */
 
 
-//                  <======array======>
+//                  <====== array ======>
 
 //  - push():       menambahkan item pada akhir Array
 //  - pop():        menghapus item dari paling akhir Array
@@ -241,7 +241,7 @@ for(let i = 0; i < joy.length; i++) {
         console.log(`   ${row[j]}`);
     }
 }
-*/
+
 
 //for of | untuk melakukan looping pada array
 for(let row of joy){
@@ -270,7 +270,7 @@ for(let ary of lary){
 let avg = sum / lary.length;
 console.log(`Total gaji keseluruhan: ${sum} Rata-rata gaji: ${avg} jt`);
 console.log("\n");
-/*
+
 let input = prompt("type! somthing");
 if(input.toLowerCase() === "pass"){
     const passw = "Ocean_Fotres";
@@ -337,3 +337,52 @@ for(let i = 0; i < 10;i++){
 }
 console.log(`Lebar: ${wid}`);
 console.log("\n");
+
+// Lexical scope
+function apllyjob() {
+    let position = "IT support";
+
+    function further() {
+        let acquaintance = `Ordal dapat memasukan ${position} dengan cara yang adil:\n`;
+        console.log(acquaintance);
+    }
+    further();
+}
+apllyjob();
+
+// function expression
+const hasilpangkat = function(val) {
+    return val * val;
+}
+console.log(hasilpangkat(9));
+console.log("\n");
+
+// function berperan argument
+function twiceDice(func) {
+    func();
+    func();
+}
+
+function throwDice() {
+    const result = Math.floor(Math.random() * 6) + 1;
+    console.log(result);
+}
+console.log("Lemparkan ke-2 dadu: \n");
+twiceDice(throwDice);
+
+
+//function bernilai balik function
+function hasilbalikFunc(){
+    const rand = Math.random();
+    if(rand < 0.1) {
+        return function() {
+            console.log("Angka lebih Besar ");
+        }
+    }else {
+        return function() {
+            console.log("Angka lebih kecil, coba lagi!");
+        }
+    }
+}
+const resul = hasilbalikFunc();
+resul();
