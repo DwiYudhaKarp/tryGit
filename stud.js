@@ -386,3 +386,33 @@ function hasilbalikFunc(){
 }
 const resul = hasilbalikFunc();
 resul();
+
+//Method : ketika menambahkan function pada suatu object property
+const myFunc = {
+    Perpangkatan : function(x){
+        return x * x;
+    },
+    pembagian : function(x, y) {
+        return parseFloat(x / y);
+    }
+}
+
+//This : memanggil suatu property pada Objc yg sama, untuk mendapatkan nilainya
+const me = {
+    who: "Qao",
+    age: "20",
+    introduce: function(){
+        return `Perkenalkan nama ${this.who} umur tahun ini: ${this.age}`
+    }
+}
+
+//try dan Catch : skip eror line
+function shout(msg) {
+    try {
+        console.log(msg.toLowerCase());
+    }
+    catch(eror){
+        console.log(eror);
+        console.log("Gunakan string untuk mengisi!");
+    }
+}
